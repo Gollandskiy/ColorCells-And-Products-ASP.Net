@@ -1,0 +1,23 @@
+﻿@model List<List<Product_ASP.Net.Models.ColorCell>>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Count</th>
+            <th>Price</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in Model)
+        {
+            <tr>
+                @foreach (var cell in row)
+                {
+                    <td style="background-color:@cell.Color">@cell.Value</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
